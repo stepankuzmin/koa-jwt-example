@@ -6,10 +6,7 @@ const jwt = require("jsonwebtoken");
 const Router = require("koa-router");
 
 const SECRET = process.env.SECRET;
-const PASSWORD = crypto
-  .createHash("sha256")
-  .update(process.env.PASSWORD)
-  .digest("base64");
+const PASSWORD = process.env.PASSWORD;
 
 const app = new Koa();
 
